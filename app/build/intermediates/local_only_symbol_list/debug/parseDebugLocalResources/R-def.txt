@@ -1,0 +1,21 @@
+R_DEF: Internal format may change without notice
+local
+id btnCloseApp
+id btnCopyCheatHelper
+id btnCopyCommand
+id btnEsc
+id btnMinimize
+id btnPresetGallery
+id btnPresetMoney
+id btnPresetUnlock
+id btnShiftD
+id btnShiftO
+id btnShiftR
+id btnStartOverlay
+id editCommand
+id headerDrag
+id layoutBubble
+id layoutPanel
+layout activity_main
+layout layout_floating_overlay
+string app_name

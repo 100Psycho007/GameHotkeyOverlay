@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <!-- 1. Floating Bubble (Visible when collapsed) -->
+    <LinearLayout
+        android:id="@+id/layoutBubble"
+        android:layout_width="52dp"
+        android:layout_height="52dp"
+        android:background="#DD1E1E2E"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:elevation="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🎮"
+            android:textSize="22sp" />
+    </LinearLayout>
+
+    <!-- 2. Expanded Floating Panel (Visible when user taps bubble) -->
+    <LinearLayout
+        android:id="@+id/layoutPanel"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:background="#F0181825"
+        android:orientation="vertical"
+        android:padding="6dp"
+        android:elevation="12dp"
+        android:visibility="gone">
+
+        <!-- Header / Drag Bar -->
+        <LinearLayout
+            android:id="@+id/headerDrag"
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="6dp"
+            android:paddingEnd="6dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="🎮 Hotkey Controller"
+                android:textColor="#CDD6F4"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <!-- Copy Helper for Brave Browser Console -->
+            <Button
+                android:id="@+id/btnCopyCheatHelper"
+                android:layout_width="wrap_content"
+                android:layout_height="28dp"
+                android:layout_marginEnd="6dp"
+                android:backgroundTint="#313244"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:text="📋 Copy JS"
+                android:textColor="#A6ADC8"
+                android:textSize="9sp" />
+
+            <Button
+                android:id="@+id/btnMinimize"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:backgroundTint="#45475A"
+                android:padding="0dp"
+                android:text="—"
+                android:textColor="#FFFFFF"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/btnCloseApp"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_marginStart="4dp"
+                android:backgroundTint="#F38BA8"
+                android:padding="0dp"
+                android:text="✕"
+                android:textColor="#11111B"
+                android:textSize="11sp" />
+        </LinearLayout>
+
+        <!-- Hotkey Quick Triggers -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_marginTop="4dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnShiftO"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:backgroundTint="#F38BA8"
+                android:padding="0dp"
+                android:text="Shift+O"
+                android:textColor="#11111B"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnShiftD"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:backgroundTint="#CBA6F7"
+                android:padding="0dp"
+                android:text="Shift+D"
+                android:textColor="#11111B"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnShiftR"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:backgroundTint="#89B4FA"
+                android:padding="0dp"
+                android:text="Shift+R"
+                android:textColor="#11111B"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnEsc"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:backgroundTint="#45475A"
+                android:padding="0dp"
+                android:text="ESC"
+                android:textColor="#CDD6F4"
+                android:textSize="11sp" />
+        </LinearLayout>
+
+        <!-- Command Input Field (For typing cheat commands directly into clipboard or web) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:layout_marginTop="6dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/editCommand"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#313244"
+                android:hint="Type cheat command..."
+                android:textColorHint="#6C7086"
+                android:textColor="#CDD6F4"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:textSize="12sp"
+                android:singleLine="true" />
+
+            <Button
+                android:id="@+id/btnCopyCommand"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="4dp"
+                android:backgroundTint="#A6E3A1"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:text="Copy"
+                android:textColor="#11111B"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Quick Presets -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Tap to copy quick cheat commands:"
+            android:textColor="#6C7086"
+            android:textSize="10sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="2dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnPresetMoney"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:backgroundTint="#313244"
+                android:padding="0dp"
+                android:text="gold=9999"
+                android:textColor="#CDD6F4"
+                android:textSize="9sp" />
+
+            <Button
+                android:id="@+id/btnPresetUnlock"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:backgroundTint="#313244"
+                android:padding="0dp"
+                android:text="unlock_all"
+                android:textColor="#CDD6F4"
+                android:textSize="9sp" />
+
+            <Button
+                android:id="@+id/btnPresetGallery"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:backgroundTint="#313244"
+                android:padding="0dp"
+                android:text="gallery_unlock"
+                android:textColor="#CDD6F4"
+                android:textSize="9sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+</FrameLayout>

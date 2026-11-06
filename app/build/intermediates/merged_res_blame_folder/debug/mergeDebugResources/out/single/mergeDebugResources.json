@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "com.example.gamehotkeyoverlay.app-debug-31:/layout_activity_main.xml.flat",
+        "source": "com.example.gamehotkeyoverlay.app-main-33:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.example.gamehotkeyoverlay.app-debug-31:/layout_layout_floating_overlay.xml.flat",
+        "source": "com.example.gamehotkeyoverlay.app-main-33:/layout/layout_floating_overlay.xml"
+    }
+]

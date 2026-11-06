@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:gravity="center_horizontal">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="🎮 Game Hotkey Overlay"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="12dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Creates a persistent floating bubble on your screen while playing games in Brave Browser. It will NEVER disappear when clicking on the game unless you minimize or close it."
+        android:textSize="14sp"
+        android:textColor="#555555"
+        android:layout_marginBottom="24dp" />
+
+    <Button
+        android:id="@+id/btnStartOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:text="Start Floating Overlay"
+        android:backgroundTint="#FF4081"
+        android:textSize="16sp"
+        android:layout_marginBottom="16dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="💡 How to use with Brave Browser:\n\n1. Tap 'Start Floating Overlay' above.\n2. Open Brave and play your game.\n3. The floating 🎮 bubble stays on top and is freely draggable anywhere.\n4. Tap the bubble to expand hotkeys and cheat tools.\n5. Tap '—' to minimize back into the bubble, or '✕' to exit."
+        android:background="#EEEEEE"
+        android:padding="16dp"
+        android:textSize="13sp"
+        android:textColor="#333333" />
+
+</LinearLayout>
